@@ -9,7 +9,23 @@ def is_twodigit_odd(number):
 
 
 def has_access(user, users_groups, file_owner, writable_by_owner, file_group, writable_by_group, writable_by_others, sudo_mode):
-    pass
+    if user == file_owner:
+        if writable_by_owner:
+            return True
+        elif sudo_mode:
+            return True
+        return False
+    else:
+        if sudo_mode:
+            return True
+        else:
+            if writable_by_others:
+                return True
+            else:
+                if file_group in users_groups:
+                    if writable_by_group:
+                        return True
+                return False
 
 
 def is_leap_year(year):

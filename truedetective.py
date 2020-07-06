@@ -1,10 +1,9 @@
 def is_twodigit_odd(number):
     return True if number % 2 == 1 and len(str(number)) == 2 else False
-    pass
 
 
 def has_access(user, users_groups, file_owner, writable_by_owner, file_group, writable_by_group, writable_by_others, sudo_mode):
-    pass
+    return True if ((user == file_owner) and (writable_by_owner or sudo_mode) or (sudo_mode) or (writable_by_others) or (file_group in users_groups) and writable_by_group) else False
 
 
 def is_leap_year(year):
