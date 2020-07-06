@@ -91,4 +91,29 @@ def should_bring_umbrella(rains, wind_scale, cloudy, red_sky, strong_flower_smel
 
 
 def should_take_a_nap(want_to, trouble_sleeping, after_4pm, at_work, mad_boss, have_30m, have_10m):
-    pass
+    if want_to:
+        if trouble_sleeping:
+            return False
+        else:
+            if after_4pm:
+                return False
+            else:
+                if at_work:
+                    if mad_boss:
+                        return False
+                    else:
+                        if have_30m:
+                            return True
+                        else:
+                            if have_10m:
+                                return True
+                            return False
+                else:
+                    if have_30m:
+                        return True
+                    else:
+                        if have_10m:
+                            return True
+                        return False
+    else:
+        return False

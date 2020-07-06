@@ -52,13 +52,13 @@ def test_should_bring_umbrella():
     assert should_bring_umbrella(False, 8, False, False, False, False, False, True) is False
 
 
-# def test_should_take_a_nap():
-#     assert should_take_a_nap(False, False, False, False, False, False, False) is False
-#     assert should_take_a_nap(True, True, False, False, False, False, False) is False
-#     assert should_take_a_nap(True, False, True, False, False, False, False) is False
-#     assert should_take_a_nap(True, False, False, False, False, False, False) is False
-#     assert should_take_a_nap(True, False, False, False, False, True, False) is True
-#     assert should_take_a_nap(True, False, False, False, False, False, True) is True
-#     assert should_take_a_nap(True, False, False, True, True, False, False) is False
-#     assert should_take_a_nap(True, False, False, True, False, False, True) is True
-#     assert should_take_a_nap(True, False, False, True, False, True, True) is True
+def test_should_take_a_nap():
+    assert should_take_a_nap(False, False, False, False, False, False, False) is False
+    assert should_take_a_nap(True, True, False, False, False, False, False) is False
+    assert should_take_a_nap(True, False, True, False, False, False, False) is False
+    assert should_take_a_nap(True, False, False, False, False, False, False) is False
+    assert should_take_a_nap(True, False, False, False, False, True, False) is True
+    assert should_take_a_nap(True, False, False, False, False, False, True) is True
+    assert should_take_a_nap(True, False, False, True, True, False, False) is False
+    assert should_take_a_nap(True, False, False, True, False, False, True) is True
+    assert should_take_a_nap(True, False, False, True, False, True, True) is True
